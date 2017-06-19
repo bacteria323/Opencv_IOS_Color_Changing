@@ -17,6 +17,7 @@
 		D51C84C11EF820530053CCE4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51C84C01EF820530053CCE4 /* Accelerate.framework */; };
 		D51C84C31EF8205C0053CCE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51C84C21EF8205C0053CCE4 /* CoreGraphics.framework */; };
 		D51C84C51EF820610053CCE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51C84C41EF820610053CCE4 /* UIKit.framework */; };
+		D51C84C71EF8226B0053CCE4 /* lena.png in Resources */ = {isa = PBXBuildFile; fileRef = D51C84C61EF8226B0053CCE4 /* lena.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D51C84C01EF820530053CCE4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		D51C84C21EF8205C0053CCE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D51C84C41EF820610053CCE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D51C84C61EF8226B0053CCE4 /* lena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lena.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		D51C84A51EF81EC00053CCE4 /* MyCoolPig */ = {
 			isa = PBXGroup;
 			children = (
+				D51C84C61EF8226B0053CCE4 /* lena.png */,
 				D51C84BD1EF820200053CCE4 /* opencv2.framework */,
 				D51C84A91EF81EC00053CCE4 /* AppDelegate.h */,
 				D51C84AA1EF81EC00053CCE4 /* AppDelegate.m */,
@@ -165,6 +168,7 @@
 				D51C84B61EF81EC00053CCE4 /* LaunchScreen.storyboard in Resources */,
 				D51C84B31EF81EC00053CCE4 /* Assets.xcassets in Resources */,
 				D51C84B11EF81EC00053CCE4 /* Main.storyboard in Resources */,
+				D51C84C71EF8226B0053CCE4 /* lena.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
