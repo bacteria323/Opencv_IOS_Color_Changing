@@ -6,6 +6,14 @@
 //  Copyright © 2017 mustardLabs. All rights reserved.
 //
 
+#import <opencv2/core.hpp>
+#import <opencv2/imgcodecs/ios.h>
+#import <opencv2/imgproc.hpp>
+
+#ifdef WITH_OPENCV_CONTRIB
+#import <opencv2/xphoto.hpp>
+#endif
+
 #import "ViewController.h"
 
 @interface ViewController ()
