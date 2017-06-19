@@ -36,11 +36,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // Load a UIImage from a resource file.
-    UIImage *originalImage = [UIImage imageNamed:@"lena.png"];
+    
+    UIImage *originalImage = [UIImage imageNamed:@"lena.png"]; // load image from file
     
     // Convert the UIImage to a cv::Mat.
     UIImageToMat(originalImage, originalMat);
     
+    // Preprocess the Matrix
     switch (originalMat.type()) {
         case CV_8UC1:
             // The cv::Mat is in grayscale format.
@@ -51,20 +53,19 @@
         case CV_8UC4:
             // The cv::Mat is in RGBA format.
             // Convert it to RGB format.
-            cv::cvtColor(originalMat, originalMat,
-                         cv::COLOR_RGBA2RGB);
-#ifdef WITH_OPENCV_CONTRIB
+            cv::cvtColor(originalMat, originalMat, cv::COLOR_RGBA2RGB);
+
+            #ifdef WITH_OPENCV_CONTRIB
             // Adjust the white balance.
-            cv::xphoto::autowbGrayworld(originalMat,
-                                        originalMat);
-#endif
+            cv::xphoto::autowbGrayworld(originalMat, originalMat);
+            #endif
             break;
         case CV_8UC3:
             // The cv::Mat is in RGB format.
-#ifdef WITH_OPENCV_CONTRIB
+            #ifdef WITH_OPENCV_CONTRIB
             // Adjust the white balance.
             cv::xphoto::autowbGrayworld(originalMat, originalMat);
-#endif
+            #endif
             break;
         default:
             break;
@@ -72,10 +73,11 @@
     
     // Call an update method every 2 seconds.
     self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0
-                                                  target:self selector:@selector(updateImage)
+                                                  target:self selector:@selector(updateImage) // method to call 
                                                 userInfo:nil repeats:YES];
 }
 
+// update method called every 2 seconds
 - (void)updateImage {
     // Generate a random color.
     double r = 0.5 + RAND_0_1() * 1.0;
